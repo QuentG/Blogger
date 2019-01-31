@@ -1,12 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import HomePage from './HomePage'
+import PostPage from './PostPage'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const App = () => (
+    <div>
+        <HomePage/>
+        <PostPage/>
+    </div>
+)
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// Attacher mon appli à l'élément root
+// Chaque component est une balise orpheline
+ReactDOM.render(<App/>, document.getElementById('root'))
