@@ -6,21 +6,21 @@ class HomePage extends Component {
     constructor() {
         super()
         this.state = {posts: [
-            {titre: 'title', description: 'desc'},
-                {titre: 'titole', description: 'descc'},
-                    {titre: 'titlje', description: 'desccc'}
+            {title: 'title', description: 'desc'},
+                {title: 'titole', description: 'descc'},
+                    {title: 'titlje', description: 'desccc'}
         ]}
     }
     render(){
         let posts = this.state.posts.map((element, key) =>
-            <Post key={key} titre={element.titre} description={element.description}/>
+            <Post key={key} title={element.title} description={element.description}/>
         )
 
         return (
             <div>
-                <h5>Home Page</h5>
-                {posts}
-                <Link to="/post">Page post</Link>
+                <div className="container articles-container">
+                    { posts }
+                </div>
             </div>
         )
     }
