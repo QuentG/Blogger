@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 
 import Post from './Post'
+import Loader from '../Includes/Loader'
 
 class HomePage extends Component {
     constructor() {
         super()
-        this.state = {posts: []}
+        this.state = {
+            posts: []
+        }
     }
 
     // Dès que le component est bien monté
@@ -14,9 +17,7 @@ class HomePage extends Component {
         // Récupération des posts
         fetch('https://jsonplaceholder.typicode.com/posts')
             .then((response) => response.json())
-            .then((response) => this.setState({
-                posts: response
-            }))
+            .then((response) => setTimeout(() => this.setState({posts: response}), 2000))
     }
 
     render(){
@@ -28,7 +29,7 @@ class HomePage extends Component {
         return (
             <div>
                 <div className="container articles-container">
-                    { posts }
+                    {(posts.length === 0) ? <Loader/> : posts}
                 </div>
             </div>
         )
