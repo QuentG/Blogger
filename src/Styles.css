@@ -1,4 +1,4 @@
-/* ------ GENRAL ------  */
+/* ------ GENERAL ------  */
 
 html, body{
     margin: 0;
@@ -44,16 +44,19 @@ header{
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .article{
     width: 30%;
     padding: 32px 40px;
     cursor: pointer;
     box-sizing: border-box;
 }
+
 .article:hover{
     background-color: #1D2630;
     border-radius: 7px;
 }
+
 .article h2{
     margin-top: 0;
 }
@@ -63,20 +66,24 @@ header{
 .post-container{
     margin-top: 110px;
 }
-.post-container h2{
+
+.post h2{
     text-align: center;
 }
-.post-container p{
+
+.post p{
     text-align: center;
 }
 
 .comments-container h2{
     text-align: left;
 }
+
 .comments-title{
     margin: 50px 0 30px;
     font-size: 18px;
 }
+
 .comment{
     margin-bottom: 30px;
     display: flex;
@@ -89,11 +96,13 @@ header{
     text-align: left;
     margin-left: 22px;
 }
+
 .comment p{
     font-size: 14px;
     text-align: left;
     margin-left: 22px;
 }
+
 .comment img{
     width: 85px;
 }
